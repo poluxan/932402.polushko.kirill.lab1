@@ -1,0 +1,120 @@
+:root {
+    --coffee-dark: #4a3527;
+    --coffee: #6f4e37;
+    --coffee-mid: #a9805e;
+    --beige: #f2e8dc;
+    --beige-light: #faf5ec;
+    --cream: #fffdf8;
+}
+ 
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    background-color: var(--beige);
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--coffee-dark);
+}
+ 
+header, footer, main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+ 
+header {
+    background-color: var(--coffee-dark);
+    color: var(--beige);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+ 
+header img {
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+ 
+header h1 {
+    margin: 0 0 0.3rem 0;
+    font-weight: normal;
+}
+ 
+header p {
+    color: var(--coffee-mid);
+    font-style: italic;
+    margin: 0;
+}
+ 
+main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+ 
+section, aside {
+    background-color: var(--cream);
+    border: 1px solid var(--coffee-mid);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+ 
+section h2, aside h2 {
+    margin-top: 0;
+    font-weight: normal;
+    color: var(--coffee);
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    max-width: 480px;
+}
+ 
+label {
+    font-size: 0.9rem;
+    color: var(--coffee);
+}
+ 
+input, textarea {
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--coffee-mid);
+    border-radius: 3px;
+    background-color: var(--beige-light);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--coffee-dark);
+}
+ 
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+ 
+button {
+    align-self: flex-start;
+    background-color: var(--coffee);
+    color: var(--cream);
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+ 
+button:hover {
+    background-color: var(--coffee-dark);
+}
+ 
+footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--coffee-dark);
+    color: var(--coffee-mid);
+}
