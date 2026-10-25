@@ -6,6 +6,7 @@
     <meta name="description" content="Личная страница Кирилла Полюшко: книги, литературные проекты и заметки о чтении.">
     <title>Полюшко Кирилл — книжная полка</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <!-- ЛР №2: внутренний способ подключения CSS. -->
     <style>
         .project-list {
@@ -42,6 +43,7 @@
                     <li><a href="#shelf">Книжная полка</a></li>
                     <li><a href="#quotes">Цитаты</a></li>
                     <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#reading">Дневник чтения</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
@@ -177,6 +179,25 @@
             </ol>
         </section>
 
+        <section id="reading" class="panel" aria-labelledby="reading-title">
+            <p class="eyebrow">05 / Страница за страницей</p>
+            <h2 id="reading-title">Дневник чтения</h2>
+            <p>Семь дней в страницах. Высокий темп — больше 50 страниц в день, «ленивый» день — не больше 20.</p>
+            <ol id="reading-days" class="reading-days" aria-label="Прочитано страниц по дням"></ol>
+            <dl class="reading-summary">
+                <div><dt>Всего страниц</dt><dd data-stat="total">—</dd></div>
+                <div><dt>Максимум за день</dt><dd data-stat="maximum">—</dd></div>
+                <div><dt>В среднем за день</dt><dd data-stat="average">—</dd></div>
+                <div><dt>Дней с высоким темпом</dt><dd data-stat="high">—</dd></div>
+                <div><dt>«Ленивых» дней</dt><dd data-stat="lazy">—</dd></div>
+                <div><dt>Доля «ленивых» дней</dt><dd data-stat="share">—</dd></div>
+            </dl>
+            <button id="reading-demo" class="primary-button" type="button" aria-describedby="reading-help">Показать статистику</button>
+            <p id="reading-help" class="hint demo-help">Введите имя во всплывающем окне. Приветствие и итог появятся в alert, подробности — в консоли браузера (F12 → Console).</p>
+            <p id="reading-status" class="status-message" role="status"></p>
+            <noscript><p>Для расчётов и демонстрации включите JavaScript. Данные примера: 18, 65, 42, 0, 80, 55, 30 страниц.</p></noscript>
+        </section>
+
         <aside class="panel author-note" aria-labelledby="author-title">
             <p class="eyebrow">На полях</p>
             <h2 id="author-title">Любимый автор</h2>
@@ -185,10 +206,10 @@
         </aside>
 
         <section id="contact" class="panel" aria-labelledby="contact-title">
-            <p class="eyebrow">05 / Продолжим разговор</p>
+            <p class="eyebrow">06 / Продолжим разговор</p>
             <h2 id="contact-title">Обратная связь</h2>
             <p id="contact-help" class="hint">Учебная форма: данные никуда не отправляются.</p>
-            <form action="#contact" method="get" aria-describedby="contact-help">
+            <form id="feedback-form" aria-describedby="contact-help">
                 <label for="name">Имя</label>
                 <input type="text" id="name" name="name" placeholder="Введите ваше имя" autocomplete="given-name" required maxlength="80">
                 <label for="email">Email</label>
@@ -196,6 +217,7 @@
                 <label for="message">Сообщение</label>
                 <textarea id="message" name="message" placeholder="Какую книгу посоветуете?" required maxlength="2000"></textarea>
                 <button class="primary-button" type="submit">Отправить</button>
+                <p id="feedback-status" class="status-message" role="status"></p>
             </form>
         </section>
     </main>
