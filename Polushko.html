@@ -1,68 +1,139 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"><!--чтобы русский норм отражался-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полюшко Кирилл — обо мне</title>
+    <meta name="description" content="Личная страница Кирилла Полюшко: книги, литературные проекты и заметки о чтении.">
+    <title>Полюшко Кирилл — книжная полка</title>
     <link rel="stylesheet" href="style.css">
+    <!-- ЛР №2: внутренний способ подключения CSS. -->
+    <style>
+        .project-list {
+            list-style-type: decimal-leading-zero;
+            padding-left: 1.8rem;
+            margin: 1.5rem 0 0;
+        }
+
+        .project-list > li {
+            padding-left: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-list > li::marker {
+            color: var(--accent);
+            font-family: var(--font-body);
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
- 
-    <header>
-        <img src="1.jfif" alt="Генерал Майонез" width="150" height="150">
-        <h1>Полюшко Кирилл</h1>
-        <p>Книжный червь и писатель</p>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="site-header">
+        <div class="header-content">
+            <p class="eyebrow">Личная страница / 932402</p>
+            <!-- ЛР №2: inline-стиль для изображения. -->
+            <img class="avatar" src="images/1.jfif" alt="Аватар Кирилла — Генерал Майонез" width="150" height="150" style="max-width: 100%;">
+            <h1>Полюшко Кирилл</h1>
+            <p class="subtitle">Книжный червь и писатель</p>
+            <p class="header-note">Читаю между строк. Записываю то, что остаётся.</p>
+        </div>
     </header>
- 
-    <main>
- 
-        <section>
-            <h2>Навыки</h2>
-            <ul>
+
+    <main id="main" class="page-content">
+        <section id="skills" class="panel skills" aria-labelledby="skills-title">
+            <p class="eyebrow">01 / Что я умею</p>
+            <h2 id="skills-title">Навыки</h2>
+            <span class="badge">Внимание к деталям</span>
+            <ul class="skill-list">
                 <li>Литературный анализ</li>
                 <li>Написание рецензий и эссе</li>
                 <li>Работа с источниками</li>
             </ul>
         </section>
- 
-        <section>
-            <h2>Проекты</h2>
-            <p>Книги, по которым я бы снял фильм или написал продолжение:</p>
-            <ol>
-                <li>«Мы» - Е. Замятин,</li>
-                <li>«Пикник на обочине» - А. Стругацкий и Б. Стругацкий</li>
-                <li>«10 негритят» - А. Кристи</li>
 
+        <section id="projects" class="panel" aria-labelledby="projects-title">
+            <p class="eyebrow">02 / Из книги в историю</p>
+            <h2 id="projects-title">Проекты</h2>
+            <p>Книги, по которым я бы снял фильм или написал продолжение.</p>
+            <p class="hint">Наведите на карточку или выберите её клавишей Tab, чтобы прочитать идею. На телефоне нажмите на карточку.</p>
+            <ol class="project-list">
+                <li>
+                    <button class="project-card" type="button" aria-label="Мы — идея проекта" aria-describedby="project-we">
+                        <span class="project-card-inner">
+                            <span class="project-front">
+                                <span class="eyebrow">Антиутопия</span>
+                                <strong class="project-title">«Мы»</strong>
+                                <span>Евгений Замятин</span>
+                                <span class="card-cue" aria-hidden="true">Перевернуть ↗</span>
+                            </span>
+                            <span class="project-back">
+                                <strong>За пределами стены</strong>
+                                <span id="project-we">Идея продолжения: история человека, который впервые выбирает собственный путь за пределами Единого Государства.</span>
+                            </span>
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="project-card" type="button" aria-label="Пикник на обочине — идея проекта" aria-describedby="project-picnic">
+                        <span class="project-card-inner">
+                            <span class="project-front">
+                                <span class="eyebrow">Научная фантастика</span>
+                                <strong class="project-title">«Пикник на обочине»</strong>
+                                <span>Аркадий и Борис Стругацкие</span>
+                                <span class="card-cue" aria-hidden="true">Перевернуть ↗</span>
+                            </span>
+                            <span class="project-back">
+                                <strong>Один день в Зоне</strong>
+                                <span id="project-picnic">Идея экранизации: камерный фильм об одной вылазке сталкера, в котором неизвестность важнее зрелищных эффектов.</span>
+                            </span>
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="project-card" type="button" aria-label="Десять негритят — идея проекта" aria-describedby="project-christie">
+                        <span class="project-card-inner">
+                            <span class="project-front">
+                                <span class="eyebrow">Детектив</span>
+                                <strong class="project-title">«Десять негритят»</strong>
+                                <span>Агата Кристи</span>
+                                <span class="card-cue" aria-hidden="true">Перевернуть ↗</span>
+                            </span>
+                            <span class="project-back">
+                                <strong>Остров подозрений</strong>
+                                <span id="project-christie">Идея экранизации: история глазами одного гостя, где каждая деталь постепенно меняет представление о других героях.</span>
+                            </span>
+                        </span>
+                    </button>
+                </li>
             </ol>
+        </section>
 
-    </section>
-    <aside>
-        <h2>Любимый автор</h2>
-        <p>Тайлер Дёрден - лишь утратив все до конца мы обретаем свободу</p>
+        <aside class="panel author-note" aria-labelledby="author-title">
+            <p class="eyebrow">На полях</p>
+            <h2 id="author-title">Любимый автор</h2>
+            <p>Чак Паланик. Нравятся его неожиданные рассказчики и внимание к внутренним противоречиям человека.</p>
+            <a href="https://ru.wikipedia.org/wiki/Паланик,_Чак" target="_blank" rel="noopener noreferrer">Об авторе ↗</a>
+        </aside>
 
-
-
-    </aside>
- 
-        <section>
-    <h2>Обратная связь</h2>
-    <form>
-        <label for="name">Имя</label>
-        <input type="text" id="name" name="name" placeholder="Введите ваше имя">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="exaple@mail.ru">
-        <label for="message">Сообщение</label>
-        <textarea id="message" name="message" placeholder="Напишите сообщение..."></textarea>
-        <button type="submit">Отправить</button>
-
-    </form>
-</section>
- 
+        <section id="contact" class="panel" aria-labelledby="contact-title">
+            <p class="eyebrow">03 / Продолжим разговор</p>
+            <h2 id="contact-title">Обратная связь</h2>
+            <p id="contact-help" class="hint">Учебная форма: данные никуда не отправляются.</p>
+            <form action="#contact" method="get" aria-describedby="contact-help">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" autocomplete="given-name" required maxlength="80">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.ru" autocomplete="email" required>
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" placeholder="Какую книгу посоветуете?" required maxlength="2000"></textarea>
+                <button class="primary-button" type="submit">Отправить</button>
+            </form>
+        </section>
     </main>
- 
-    <footer>
-        <p>&copy; 2026 Полюшко Кирилл</p>
+
+    <footer class="site-footer">
+        <p>© 2026 Полюшко Кирилл · Группа 932402</p>
+        <a href="lab1/Polushko.html">Первая лабораторная</a>
     </footer>
- 
 </body>
 </html>
