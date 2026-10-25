@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="440" viewBox="0 0 320 440" role="img" aria-labelledby="title desc">
+<title id="title">Мы — Евгений Замятин</title><desc id="desc">Геометрический город на терракотовом фоне. Учебная обложка.</desc>
+<rect width="320" height="440" fill="#7b3828"/>
+<rect x="16" y="16" width="288" height="408" rx="2" fill="none" stroke="#fff0d5" opacity=".55"/>
+<path d="M28 0v440" stroke="#fff0d5" opacity=".2"/>
+<g fill="#fff0d5" opacity=".75"><rect x="72" y="244" width="30" height="98"/><rect x="110" y="218" width="44" height="124"/><rect x="162" y="265" width="34" height="77"/><rect x="204" y="236" width="44" height="106"/></g><circle cx="228" cy="174" r="26" fill="none" stroke="#fff0d5"/>
+<g fill="#fff0d5" font-family="Georgia, serif" text-anchor="middle"><text x="160" y="77" font-size="14">ЕВГЕНИЙ ЗАМЯТИН</text><text x="160" y="152" font-size="58">МЫ</text></g>
+<text x="160" y="401" fill="#fff0d5" font-family="Arial, sans-serif" font-size="10" letter-spacing="3" text-anchor="middle">КНИЖНАЯ ПОЛКА</text>
+</svg>

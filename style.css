@@ -132,6 +132,44 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
     .project-card { min-height: 330px; }
     .project-front, .project-back { padding: 1.1rem; }
 }
+/* ЛР №3: Flexbox для меню и книжной полки. */
+.site-nav { margin-top: 2rem; border-top: 1px solid #866e5a; padding-top: 1rem; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; list-style: none; margin: 0; padding: 0; }
+.site-nav a:link, .site-nav a:visited { display: inline-block; padding-block: 0.4rem; color: var(--paper); text-underline-offset: 0.3rem; }
+.site-nav a:hover { color: var(--header-muted); }
+.site-nav a:active { color: var(--paper); }
+.site-nav a:focus-visible { outline-color: var(--header-muted); }
+.section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.section-heading h2, .section-heading p:last-child { margin-bottom: 0; }
+.bookshelf { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.book-card { flex: 0 0 calc((100% - 3rem) / 3); min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow-wrap: anywhere; background: var(--paper); }
+.book-cover { width: 100%; aspect-ratio: 8 / 11; object-fit: cover; border-radius: 5px 5px 0 0; }
+.book-info { padding: 1.25rem; }
+.book-info h3 { margin-block: 0.85rem 0.5rem; font-size: 1.5rem; }
+.book-info p:last-child { margin-bottom: 0; font-size: 0.875rem; }
+.book-author { color: var(--muted); font-size: 0.875rem; }
+.reading-status { display: inline-block; border: 1px solid #b8c2ac; border-radius: 2rem; padding: 0.1rem 0.6rem; background: #ecf0e5; color: #3e5132; font-size: 0.75rem; font-weight: 700; }
+.reading-status-progress { border-color: var(--line); background: var(--primary); color: var(--accent); }
+
+/* Grid для двумерного размещения цитат. */
+.quotes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.quote-card { display: flex; flex-direction: column; min-width: 0; margin: 0; border-top: 2px solid var(--accent); padding: 1.1rem 0 0; }
+blockquote { flex: 1; margin: 0 0 1rem; font-family: var(--font-heading); font-size: 1.15rem; }
+blockquote p { margin: 0; }
+figcaption { color: var(--accent); font-size: 0.8rem; font-weight: 700; }
+figcaption span { display: block; margin-top: 0.2rem; color: var(--muted); font-weight: 400; }
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .book-card { flex-basis: calc((100% - 1.5rem) / 2); }
+    .section-heading { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 600px) {
+    .book-card { flex-basis: 100%; }
+    .quotes-grid { grid-template-columns: minmax(0, 1fr); }
+    .section-heading { align-items: flex-start; flex-direction: column; }
+    .site-nav ul { gap: 0.35rem 1rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }

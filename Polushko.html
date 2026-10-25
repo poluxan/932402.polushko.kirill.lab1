@@ -36,6 +36,15 @@
             <h1>Полюшко Кирилл</h1>
             <p class="subtitle">Книжный червь и писатель</p>
             <p class="header-note">Читаю между строк. Записываю то, что остаётся.</p>
+            <nav class="site-nav" aria-label="Разделы страницы">
+                <ul>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#shelf">Книжная полка</a></li>
+                    <li><a href="#quotes">Цитаты</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -51,8 +60,68 @@
             </ul>
         </section>
 
+        <section id="shelf" class="panel" aria-labelledby="shelf-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">02 / Моя маленькая библиотека</p>
+                    <h2 id="shelf-title">Книги на полке</h2>
+                </div>
+                <p class="hint">Три истории, к которым возвращаюсь</p>
+            </div>
+            <!-- ЛР №3: одномерный ряд карточек на Flexbox. -->
+            <div class="bookshelf">
+                <article class="book-card" aria-labelledby="book-we-title">
+                    <img class="book-cover" src="images/covers/we.svg" alt="Условная обложка романа «Мы»: геометрический город" width="320" height="440" loading="lazy">
+                    <div class="book-info">
+                        <span class="reading-status">Прочитано</span>
+                        <h3 id="book-we-title">Мы</h3>
+                        <p class="book-author">Евгений Замятин</p>
+                        <p>О свободе выбора в мире, где всё уже решено.</p>
+                    </div>
+                </article>
+                <article class="book-card" aria-labelledby="book-picnic-title">
+                    <img class="book-cover" src="images/covers/picnic.svg" alt="Условная обложка «Пикника на обочине»: круги над тёмной Зоной" width="320" height="440" loading="lazy">
+                    <div class="book-info">
+                        <span class="reading-status">Прочитано</span>
+                        <h3 id="book-picnic-title">Пикник на обочине</h3>
+                        <p class="book-author">Аркадий и Борис Стругацкие</p>
+                        <p>О неизвестном, человеческих желаниях и их цене.</p>
+                    </div>
+                </article>
+                <article class="book-card" aria-labelledby="book-christie-title">
+                    <img class="book-cover" src="images/covers/christie.svg" alt="Условная обложка детектива Агаты Кристи: одинокий дом на острове" width="320" height="440" loading="lazy">
+                    <div class="book-info">
+                        <span class="reading-status reading-status-progress">В процессе</span>
+                        <h3 id="book-christie-title">Десять негритят</h3>
+                        <p class="book-author">Агата Кристи</p>
+                        <p>Перечитываю и ищу подсказки, пропущенные в первый раз.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="quotes" class="panel" aria-labelledby="quotes-title">
+            <p class="eyebrow">03 / Сохранить в памяти</p>
+            <h2 id="quotes-title">Цитаты недели</h2>
+            <!-- Вариант 10: три блока в одной строке; на мобильном — по одному. -->
+            <div class="quotes-grid">
+                <figure class="quote-card">
+                    <blockquote><p>Мы все учились понемногу,<br>Чему-нибудь и как-нибудь.</p></blockquote>
+                    <figcaption>Александр Пушкин<span><cite>Евгений Онегин</cite></span></figcaption>
+                </figure>
+                <figure class="quote-card">
+                    <blockquote><p>Счастливые часов не наблюдают.</p></blockquote>
+                    <figcaption>Александр Грибоедов<span><cite>Горе от ума</cite></span></figcaption>
+                </figure>
+                <figure class="quote-card">
+                    <blockquote><p>И какой же русский не любит быстрой езды?</p></blockquote>
+                    <figcaption>Николай Гоголь<span><cite>Мёртвые души</cite></span></figcaption>
+                </figure>
+            </div>
+        </section>
+
         <section id="projects" class="panel" aria-labelledby="projects-title">
-            <p class="eyebrow">02 / Из книги в историю</p>
+            <p class="eyebrow">04 / Из книги в историю</p>
             <h2 id="projects-title">Проекты</h2>
             <p>Книги, по которым я бы снял фильм или написал продолжение.</p>
             <p class="hint">Наведите на карточку или выберите её клавишей Tab, чтобы прочитать идею. На телефоне нажмите на карточку.</p>
@@ -116,7 +185,7 @@
         </aside>
 
         <section id="contact" class="panel" aria-labelledby="contact-title">
-            <p class="eyebrow">03 / Продолжим разговор</p>
+            <p class="eyebrow">05 / Продолжим разговор</p>
             <h2 id="contact-title">Обратная связь</h2>
             <p id="contact-help" class="hint">Учебная форма: данные никуда не отправляются.</p>
             <form action="#contact" method="get" aria-describedby="contact-help">
